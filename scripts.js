@@ -74,3 +74,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 });
+
+function change_cow() {
+    stdin = $("#stdin")
+
+
+    cow_name = stdin.val();
+
+    $.ajax({
+        url: 'cowfiles/' + cow_name + ".cow"
+    }).done(function(content){
+        $("#cow").text(content);
+    });
+}
+
+function completion() {
+    //console.log("completion");
+}
