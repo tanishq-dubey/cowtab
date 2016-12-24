@@ -12,3 +12,32 @@ body {
 	background-color: #22313F;
 	color: #ECECEC;
 }
+
+#path {
+  float: left
+}
+
+.stdin-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+#stdin {
+  width: 100%;
+}
+
+input[type="text"] {
+  margin-left: 1ch;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  margin-top: -1px;
+}
+
+form {
+  font-family: monospace;
+  font-size: 1vw;
+}

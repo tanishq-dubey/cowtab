@@ -4,17 +4,25 @@
 		<script src="jqm.js"></script>
 		<script src="scripts.js"></script>
 		<link rel="stylesheet" href="style.css">
+
+    <form onsubmit="change_cow();return false" id="current_line" method="POST">
+      <label id="path" for="stdin">$ fortune | cowsay -f</label>
+      <span class="stdin-wrapper"><input name="stdin" id="stdin" type="text" autocomplete="off" onkeydown="completion()" autofocus></span>
+    </form>
+
 		<div class="container">
 		<div class="mydiv">
 <pre>
 <span id="cowsay-barsTop"></span>
 <span id="cowsay-output"></span>
 <span id="cowsay-barsBot"></span>
+<span id="cow">
       \   ^__^
        \  (oo)\_______
           (__)\ 0   0 )\  *
               ||--0-w | \/
               ||     ||
+</span>
 </pre>
 			</div>
 			</div>

@@ -1,3 +1,14 @@
+cowfiles = ["small", "head-in", "moofasa", "skeleton",
+    "three-eyes", "dragon", "meow", "turtle", "stimpy",
+    "hellokitty", "www", "ghostbusters", "elephant-in-snake",
+    "tux", "eyes", "flaming-sheep", "bud-frogs", "bunny",
+    "turkey", "koala", "telebears", "cower", "kitty",
+    "supermilker", "elephant", "satanic", "bong",
+    "luke-koala", "dragon-and-cow", "kosh", "vader",
+    "cheese", "mutilated", "stegosaurus", "kiss", "milk",
+    "sheep", "udder", "beavis.zen", "default", "daemon",
+    "ren", "moose", "vader-koala", "sodomized", "surgery"]
+
 document.addEventListener("DOMContentLoaded", function() {
     var lines;
     var randomN;
@@ -74,3 +85,34 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 });
+
+function change_cow() {
+    stdin = $("#stdin")
+
+    cow_name = stdin.val();
+
+    $.ajax({
+        url: 'cowfiles/' + cow_name + ".cow"
+    }).done(function(content) {
+        $("#cow").text(content);
+    });
+}
+
+function completion() {
+    stdin = $("#stdin");
+    text = stdin.val();
+
+    if (window.event.key == "Tab") {
+        window.event.preventDefault();
+        if (text) {
+            for (var i = 0; i < cowfiles.length; i++) {
+                cow = cowfiles[i];
+                if (cow.startsWith(text)) {
+                    console.log("completing to " + cow);   
+                    stdin.val(cow);
+                    break;
+                }
+            }
+        }
+    }
+}
