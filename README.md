@@ -14,7 +14,9 @@ So if i wanted to add `test.cow` I would copy the file to the "cows" directory, 
 
 ### Thanks to:
 alex-chew/landing (https://github.com/alex-chew/landing) for helping me with the options page
+
 paulkaefer/cowsay-files (https://github.com/paulkaefer/cowsay-files) for providing additional cow files
+
 https://packages.debian.org/sid/cowsay for providing me with the original cows
 
 ![Very Short Fortunes](http://i.imgur.com/G1ceOgX.png)
