@@ -5,7 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
     var files = ["art", "ascii-art", "computers", "cookie", "definitions", "drugs", "education", "ethnic", "food", "fortunes", "goedel", "humorists", "kids", "law", "linuxcookie", "literature", "love", "magic", "medicine", "men-women", "miscellaneous", "news", "people", "pets", "platitudes", "politics", "riddles", "science", "songs-poems", "sports", "startrek", "translate-me", "wisdom", "work", "zippy"];
     var randF = parseInt(Math.random() * files.length);
 
-
+    chrome.runtime.onInstalled.addListener(details => {
+      if (details.reason === "update") {
+        let newVersion = chrome.runtime.getManifest().version;
+        console.log(`Updated from ${details.previousVersion} to ${newVersion}`);
+        if (details.previousVersion != newVersion) {
+             chrome.windows.create({'url': 'changes.html', 'type': 'popup'}, function(window) {});
+        }
+      }
+});
 
     $.ajax({
         url: 'fortunes/' + files[randF]
@@ -23,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("main").style.color = items.fgColor;
             cowF = items.cowType;
             cowM = items.cowMods;
-            console.log(cowM);
-            console.log(items.cowMods);
             var cowFile = new XMLHttpRequest();
             // Now load the cow file
             cowFile.open("GET", "cows/" + cowF + ".cow", true);
@@ -37,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         var thoughtText = "\\";
                         var eyeText = "oo";
                         var tongueText = "  ";
-                        console.log(cowM);
                         // Check to see if any modifiers have been applied
                         if (cowM === "borg") {
                             eyeText = "==";
