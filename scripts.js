@@ -2,6 +2,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var lines;
     var randomN;
 
+    var cabbage = `  \\     .-~~~~-.
+   \\   /  ( ( ' \\
+      | (  )  )  |
+      \\ ) ' }  / /
+      (\` \\ , /  ~)
+       \`-.\`\\/_.-'
+          \`""`;
+
+    var cow = `  \\   ^__^
+   \\  (oo)\\_______
+      (__)\\ 0   0 )\\  *
+          ||--0-w | \\/
+          ||     ||`;
+
     var files = ["art", "ascii-art", "computers", "cookie", "definitions", "drugs", "education", "ethnic", "food", "fortunes", "goedel", "humorists", "kids", "law", "linuxcookie", "literature", "love", "magic", "medicine", "men-women", "miscellaneous", "news", "people", "pets", "platitudes", "politics", "riddles", "science", "songs-poems", "sports", "startrek", "translate-me", "wisdom", "work", "zippy"];
     var randF = parseInt(Math.random() * files.length);
     $.ajax({
@@ -71,6 +85,13 @@ document.addEventListener("DOMContentLoaded", function() {
             cowsayTop.innerHTML = barsTop;
             cowsayBot.innerHTML = barsBot;
             cowsayOutput.innerHTML = textArray.join('');
+
+            chrome.storage.sync.get('vegan', (vegan) => {
+                console.log(vegan);
+                var speaker = (vegan.vegan) ? cabbage: cow;
+                console.log(speaker)
+                document.getElementsByTagName('pre')[0].innerHTML += speaker;
+            })
         }
     })
 });
