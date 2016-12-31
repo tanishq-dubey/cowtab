@@ -20,9 +20,9 @@ const getOptions = () => {
 	return new Promise(resolve => {
 		chrome.storage.sync.get({
 			bgColor: "#22313F",
-            fgColor: "#ECECEC",
-            cowType: "default",
-            cowMods: "default"
+			fgColor: "#ECECEC",
+			cowType: "default",
+			cowMods: "default"
 		}, resolve);
 	});
 };
