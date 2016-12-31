@@ -1,16 +1,109 @@
-const speechElement = document.querySelector("#speech");
 const tabSize = 8;
-const getRandomIn = array => {
+const getRandomInArray = array => {
 	return array[Math.floor(Math.random() * array.length)];
 }
+const $ = (selector, from = document) => {
+	return from.querySelector(selector);
+};
+const $$ = (selector, from = document) => {
+	return Array.from(from.querySelectorAll(selector));
+};
 
+const getRandomInFolder = async folder => {
+	let files = (await (await fetch(folder + "/index.txt")).text()).split("\n");
+	/* Remove empty string at end of array because of UNIX line ending */
+	files = files.slice(0, -1);
+	return (await fetch(folder + "/" + getRandomInArray(files))).text();
+};
+
+const getOptions = () => {
+	return new Promise(resolve => {
+		chrome.storage.sync.get({
+			bgColor: "#22313F",
+            fgColor: "#ECECEC",
+            cowType: "default",
+            cowMods: "default"
+		}, resolve);
+	});
+};
+
+const cowModifiers = {
+	default: {
+		thoughts: "\\",
+		eyes: "oo",
+		tongue: "  "
+	},
+	borg: {
+		eyes: "=="
+	},
+	dead: {
+		eyes: "XX",
+		tongue: "U "
+	},
+	greedy: {
+		eyes: "$$"
+	},
+	paranoid: {
+		eyes: "@@"
+	},
+	stoned: {
+		eyes: "**",
+		tongue: "U "
+	},
+	tired: {
+		eyes: "--"
+	},
+	wired: {
+		eyes: "OO"
+	},
+	youthful: {
+		eyes: ".."
+	}
+};
+
+// Display cow
 (async () => {
-	const fortuneFiles = (await (await fetch("fortunes/index.txt")).text()).split("\n").slice(0, -1);
-	const fortuneFileContent = await (await fetch("fortunes/" + getRandomIn(fortuneFiles))).text();
-	const fortunes = fortuneFileContent.split("\n%\n")
+	const options = await getOptions();
+	const styleElement = document.createElement("style");
+	styleElement.textContent = `
+		body {
+			background-color: ${options.bgColor};
+			color: ${options.fgColor};
+		}
+	`;
+
+	let cow = await (await fetch("cows/" + options.cowType + ".cow")).text();
+
+	// Remove non-cow lines
+	cow = cow
+	.split("\n")
+	.filter(line => !line.startsWith("#"))
+	.slice(1, -2)
+	.join("\n");
+
+	// "Unescape" backslashes
+	cow = cow.replace(/\\\\/g, "\\");
+
+	// Apply modifiers
+	Object.entries(
+		Object.assign(
+			{},
+			cowModifiers.default,
+			cowModifiers[options.cowMods]
+		)
+	).forEach(([key, value]) => {
+		cow = cow.split("$" + key).join(value);
+	});
+
+	$("#cow").textContent = cow;
+})();
+
+// Display fortune
+(async () => {
+	const fortunes = (await getRandomInFolder("fortunes")).split("\n%\n")
 	.filter(fortune => fortune.length !== 0);
 
-	let fortuneLines = getRandomIn(fortunes).split("\n");
+	let fortuneLines = getRandomInArray(fortunes).split("\n");
 
 	// Replace tabs with spaces so length checks work
 	fortuneLines = fortuneLines.map(line => {
@@ -44,5 +137,5 @@ const getRandomIn = array => {
 	fortuneLines.unshift(" " + "_".repeat(maxWidth + 2));
 	fortuneLines.push(   " " + "-".repeat(maxWidth + 2));
 
-	speechElement.textContent = fortuneLines.join("\n");
+	$("#speech").textContent = fortuneLines.join("\n");
 })();

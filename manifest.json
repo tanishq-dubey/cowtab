@@ -2,11 +2,15 @@
 	"name": "cow tab",
 	"manifest_version": 2,
 	"description": "A simple, fast, new tab page, with a retro feel and good advice.",
-	"version": "1.0",
-	"permissions": ["management"],
+	"version": "1.1",
+	"permissions": ["management", "storage"],
 	"icons": { "16": "icon.png",
            	   "48": "icon.png",
           	   "128": "icon.png" },
+    "options_ui": {
+   		"page": "options.html",
+    	"chrome_style": true
+  	},
 	"chrome_url_overrides" : {
 		"newtab": "newtab.html"
 	}
