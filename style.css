@@ -1,4 +1,4 @@
-body {
+html {
 	height: 100vh;
 	overflow: hidden;
 
@@ -10,6 +10,11 @@ body {
 	background: #22313F;
 	color: #ECECEC;
 	font-size: 2vw;
+}
+
+body {
+	/* Override extension-specific user agent style */
+	font-size: inherit;
 }
 
 pre {
