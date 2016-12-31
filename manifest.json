@@ -8,11 +8,11 @@
            	   "48": "icon.png",
           	   "128": "icon.png" },
     "options_ui": {
-   		"page": "options.html",
+   		"page": "options/options.html",
     	"chrome_style": true
   	},
 	"chrome_url_overrides" : {
-		"newtab": "newtab.html"
+		"newtab": "newtab/newtab.html"
 	},
 	"background": {
 		"scripts": ["background.js"],

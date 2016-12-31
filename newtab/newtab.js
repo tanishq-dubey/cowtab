@@ -72,7 +72,7 @@ const cowModifiers = {
 		}
 	`;
 
-	let cow = await (await fetch("cows/" + options.cowType + ".cow")).text();
+	let cow = await (await fetch("../cows/" + options.cowType + ".cow")).text();
 
 	// Remove non-cow lines
 	cow = cow
@@ -100,7 +100,7 @@ const cowModifiers = {
 
 // Display fortune
 (async () => {
-	const fortunes = (await getRandomInFolder("fortunes")).split("\n%\n")
+	const fortunes = (await getRandomInFolder("../fortunes")).split("\n%\n")
 	.filter(fortune => fortune.length !== 0);
 
 	let fortuneLines = getRandomInArray(fortunes).split("\n");
