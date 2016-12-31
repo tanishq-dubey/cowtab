@@ -71,6 +71,7 @@ const cowModifiers = {
 			color: ${options.fgColor};
 		}
 	`;
+	document.head.appendChild(styleElement);
 
 	let cow = await (await fetch("../cows/" + options.cowType + ".cow")).text();
 
