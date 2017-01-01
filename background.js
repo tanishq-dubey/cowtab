@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(async ({reason, previousVersion}) => {
 		   reason === "update"
 		&& previousVersion !== chrome.runtime.getManifest().version
 	) {
-		chrome.windows.create({url: "changes.html", type: "popup"});
+		chrome.windows.create({url: "changes/changes.html", type: "popup"});
 	}
 
 	// Convert legacy option keys

@@ -1,0 +1,15 @@
+html {
+	/* The default colors and font-size for new tab */
+	background: #22313F;
+	color: #ECECEC;
+	font-size: 1.5vh;
+}
+
+body {
+	/* Override extension-specific user agent style */
+	font-size: inherit;
+
+	width: fit-content;
+	padding: 20px;
+	margin: 0 auto;
+}
