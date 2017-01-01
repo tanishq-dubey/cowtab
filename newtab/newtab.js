@@ -70,11 +70,7 @@ const cowModifiers = {
 	let cow = await (await fetch("../cows/" + options.cowType + ".cow")).text();
 
 	// Remove non-cow lines
-	cow = cow
-	.split("\n")
-	.filter(line => !line.startsWith("#"))
-	.slice(1, -2)
-	.join("\n");
+	cow = cow.match(/^\$the_cow =.+\n([\S\s]*?)EOC/)[1];
 
 	// "Unescape" backslashes
 	cow = cow.replace(/\\\\/g, "\\");
