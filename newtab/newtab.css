@@ -1,0 +1,24 @@
+html {
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background: #22313F;
+	color: #ECECEC;
+	font-size: 2vw;
+}
+
+body {
+	/* Override extension-specific user agent style */
+	font-size: inherit;
+}
+
+pre {
+	font-family: monospace;
+	white-space: pre;
+	margin: 0;
+}
