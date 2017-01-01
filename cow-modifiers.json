@@ -1,0 +1,33 @@
+{
+	"default": {
+		"thoughts": "\\",
+		"eyes": "oo",
+		"tongue": "  "
+	},
+	"borg": {
+		"eyes": "=="
+	},
+	"dead": {
+		"eyes": "XX",
+		"tongue": "U "
+	},
+	"greedy": {
+		"eyes": "$$"
+	},
+	"paranoid": {
+		"eyes": "@@"
+	},
+	"stoned": {
+		"eyes": "**",
+		"tongue": "U "
+	},
+	"tired": {
+		"eyes": "--"
+	},
+	"wired": {
+		"eyes": "OO"
+	},
+	"youthful": {
+		"eyes": ".."
+	}
+}

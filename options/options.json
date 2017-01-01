@@ -1,0 +1,24 @@
+{
+	"backgroundColor": {
+		"default": "#22313F",
+		"type": "color"
+	},
+	"textColor": {
+		"default": "#ECECEC",
+		"type": "color"
+	},
+	"cowType": {
+		"default": "default.cow",
+		"type": "option",
+		"options": {
+			"fromLines": "../cows/index.txt"
+		}
+	},
+	"cowModifier": {
+		"default": "default",
+		"type": "option",
+		"options": {
+			"fromJSONKeys": "../cow-modifiers.json"
+		}
+	}
+}

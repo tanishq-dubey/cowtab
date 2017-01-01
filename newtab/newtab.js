@@ -7,67 +7,29 @@ const getRandomInFolder = async folder => {
 	let files = (await fetchText(folder + "/index.txt")).split("\n");
 	/* Remove empty string at end of array because of UNIX line ending */
 	files = files.slice(0, -1);
-	return (await fetch(folder + "/" + getRandomInArray(files))).text();
+	return fetchText(folder + "/" + getRandomInArray(files));
 };
 
-const getOptions = () => {
-	return new Promise(resolve => {
-		chrome.storage.sync.get({
-			bgColor: "#22313F",
-			fgColor: "#ECECEC",
-			cowType: "default",
-			cowMods: "default"
-		}, resolve);
-	});
-};
-
-const cowModifiers = {
-	default: {
-		thoughts: "\\",
-		eyes: "oo",
-		tongue: "  "
-	},
-	borg: {
-		eyes: "=="
-	},
-	dead: {
-		eyes: "XX",
-		tongue: "U "
-	},
-	greedy: {
-		eyes: "$$"
-	},
-	paranoid: {
-		eyes: "@@"
-	},
-	stoned: {
-		eyes: "**",
-		tongue: "U "
-	},
-	tired: {
-		eyes: "--"
-	},
-	wired: {
-		eyes: "OO"
-	},
-	youthful: {
-		eyes: ".."
-	}
+const getOptions = async () => {
+	return chromep.storage.sync.get(
+		Object.keys(await fetchJSON("../options/options.json"))
+	);
 };
 
 // Display cow
 (async () => {
+	const cowModifiers = await fetchJSON("../cow-modifiers.json");
 	const options = await getOptions();
 	const styleElement = document.createElement("style");
 	styleElement.textContent = `
-		body {
-			background-color: ${options.bgColor};
-			color: ${options.fgColor};
+		html {
+			background-color: ${options.backgroundColor};
+			color: ${options.textColor};
 		}
 	`;
 	document.head.appendChild(styleElement);
 
-	let cow = await (await fetch("../cows/" + options.cowType + ".cow")).text();
+	let cow = await fetchText("../cows/" + options.cowType);
 
 	// Remove non-cow lines
 	cow = cow.match(/^\$the_cow =.+\n([\S\s]*?)EOC/)[1];
@@ -80,7 +42,7 @@ const cowModifiers = {
 		Object.assign(
 			{},
 			cowModifiers.default,
-			cowModifiers[options.cowMods]
+			cowModifiers[options.cowModifier]
 		)
 	).forEach(([key, value]) => {
 		cow = cow.split("$" + key).join(value);

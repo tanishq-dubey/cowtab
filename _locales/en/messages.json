@@ -1,0 +1,392 @@
+{
+	"option_backgroundColor": {
+		"message": "Background color"
+	},
+	"option_textColor": {
+		"message": "Text color"
+	},
+	"option_cowType": {
+		"message": "Cow type"
+	},
+	"option_cowModifier": {
+		"message": "Cow modifier"
+	},
+	"option_cowModifier_default": {
+		"message": "None"
+	},
+	"option_cowModifier_borg": {
+		"message": "Borg Mode"
+	},
+	"option_cowModifier_dead": {
+		"message": "Dead"
+	},
+	"option_cowModifier_greedy": {
+		"message": "Greedy"
+	},
+	"option_cowModifier_paranoid": {
+		"message": "Paranoid"
+	},
+	"option_cowModifier_stoned": {
+		"message": "Stoned"
+	},
+	"option_cowModifier_tired": {
+		"message": "Tired"
+	},
+	"option_cowModifier_wired": {
+		"message": "Wired"
+	},
+	"option_cowModifier_youthful": {
+		"message": "Youthful"
+	},
+	"option_cowType_ackbarcow": {
+		"message": "Ackbar"
+	},
+	"option_cowType_apertureblankcow": {
+		"message": "Aperture blank"
+	},
+	"option_cowType_aperturecow": {
+		"message": "Aperture"
+	},
+	"option_cowType_atatcow": {
+		"message": "Atat"
+	},
+	"option_cowType_atomcow": {
+		"message": "Atom"
+	},
+	"option_cowType_awesomefacecow": {
+		"message": "Awesome face"
+	},
+	"option_cowType_bananacow": {
+		"message": "Banana"
+	},
+	"option_cowType_beaviszencow": {
+		"message": "Beavis zen"
+	},
+	"option_cowType_beescow": {
+		"message": "Bees"
+	},
+	"option_cowType_billthecatcow": {
+		"message": "Bill the cat"
+	},
+	"option_cowType_biohazardcow": {
+		"message": "Biohazard"
+	},
+	"option_cowType_bishopcow": {
+		"message": "Bishop"
+	},
+	"option_cowType_blackmesacow": {
+		"message": "Black mesa"
+	},
+	"option_cowType_bongcow": {
+		"message": "Bong"
+	},
+	"option_cowType_boxcow": {
+		"message": "Box"
+	},
+	"option_cowType_brokenheartcow": {
+		"message": "Broken heart"
+	},
+	"option_cowType_budfrogscow": {
+		"message": "Bud frogs"
+	},
+	"option_cowType_bunnycow": {
+		"message": "Bunny"
+	},
+	"option_cowType_C3POcow": {
+		"message": "C3PO"
+	},
+	"option_cowType_cakecow": {
+		"message": "Cake"
+	},
+	"option_cowType_cakewithcandlescow": {
+		"message": "Cake with candles"
+	},
+	"option_cowType_catcow": {
+		"message": "Cat"
+	},
+	"option_cowType_cheesecow": {
+		"message": "Cheese"
+	},
+	"option_cowType_chessmencow": {
+		"message": "Chessmen"
+	},
+	"option_cowType_clawarmcow": {
+		"message": "Claw arm"
+	},
+	"option_cowType_clippycow": {
+		"message": "Clippy"
+	},
+	"option_cowType_companioncubecow": {
+		"message": "Companion cube"
+	},
+	"option_cowType_cowercow": {
+		"message": "Cower"
+	},
+	"option_cowType_cubecow": {
+		"message": "Cube"
+	},
+	"option_cowType_daemoncow": {
+		"message": "Daemon"
+	},
+	"option_cowType_dalekcow": {
+		"message": "Dalek"
+	},
+	"option_cowType_dalekshootingcow": {
+		"message": "Dalek shooting"
+	},
+	"option_cowType_defaultcow": {
+		"message": "Default"
+	},
+	"option_cowType_dolphincow": {
+		"message": "Dolphin"
+	},
+	"option_cowType_dragonandcowcow": {
+		"message": "Dragon and cow"
+	},
+	"option_cowType_dragoncow": {
+		"message": "Dragon"
+	},
+	"option_cowType_elephantcow": {
+		"message": "Elephant"
+	},
+	"option_cowType_elephant2cow": {
+		"message": "Elephant 2"
+	},
+	"option_cowType_elephantinsnakecow": {
+		"message": "Elephant in snake"
+	},
+	"option_cowType_explosioncow": {
+		"message": "Explosion"
+	},
+	"option_cowType_eyescow": {
+		"message": "Eyes"
+	},
+	"option_cowType_fatbananacow": {
+		"message": "Fat banana"
+	},
+	"option_cowType_fatcowcow": {
+		"message": "Fat cow"
+	},
+	"option_cowType_firecow": {
+		"message": "Fire"
+	},
+	"option_cowType_flamingsheepcow": {
+		"message": "Flaming sheep"
+	},
+	"option_cowType_foxcow": {
+		"message": "Fox"
+	},
+	"option_cowType_ghostbusterscow": {
+		"message": "Ghostbusters"
+	},
+	"option_cowType_gladoscow": {
+		"message": "GlaDOS"
+	},
+	"option_cowType_goldeneaglecow": {
+		"message": "Golden eagle"
+	},
+	"option_cowType_happywhalecow": {
+		"message": "Happy whale"
+	},
+	"option_cowType_headincow": {
+		"message": "Head in"
+	},
+	"option_cowType_hellokittycow": {
+		"message": "Hello Kitty"
+	},
+	"option_cowType_homercow": {
+		"message": "Homer"
+	},
+	"option_cowType_jellyfishcow": {
+		"message": "Jellyfish"
+	},
+	"option_cowType_kilroycow": {
+		"message": "Kilroy"
+	},
+	"option_cowType_kingcow": {
+		"message": "King"
+	},
+	"option_cowType_kisscow": {
+		"message": "Kiss"
+	},
+	"option_cowType_kittencow": {
+		"message": "Kitten"
+	},
+	"option_cowType_kittycow": {
+		"message": "Kitty"
+	},
+	"option_cowType_knightcow": {
+		"message": "Knight"
+	},
+	"option_cowType_koalacow": {
+		"message": "Koala"
+	},
+	"option_cowType_koshcow": {
+		"message": "Kosh"
+	},
+	"option_cowType_lightbulbcow": {
+		"message": "Lightbulb"
+	},
+	"option_cowType_lobstercow": {
+		"message": "Lobster"
+	},
+	"option_cowType_lollerskatescow": {
+		"message": "Lollerskates"
+	},
+	"option_cowType_lukekoalacow": {
+		"message": "Luke koala"
+	},
+	"option_cowType_mailchimpcow": {
+		"message": "Mailchimp"
+	},
+	"option_cowType_mazerunnercow": {
+		"message": "Maze runner"
+	},
+	"option_cowType_mechandcow": {
+		"message": "Mech and cow"
+	},
+	"option_cowType_meowcow": {
+		"message": "Meow"
+	},
+	"option_cowType_milkcow": {
+		"message": "Milk"
+	},
+	"option_cowType_monalisacow": {
+		"message": "Mona Lisa"
+	},
+	"option_cowType_moofasacow": {
+		"message": "Moofasa"
+	},
+	"option_cowType_moosecow": {
+		"message": "Moose"
+	},
+	"option_cowType_mulecow": {
+		"message": "Mule"
+	},
+	"option_cowType_mutilatedcow": {
+		"message": "Mutilated"
+	},
+	"option_cowType_nyancow": {
+		"message": "Nyan"
+	},
+	"option_cowType_octopuscow": {
+		"message": "Octopus"
+	},
+	"option_cowType_pawncow": {
+		"message": "Pawn"
+	},
+	"option_cowType_periodictablecow": {
+		"message": "Periodic table"
+	},
+	"option_cowType_personalityspherecow": {
+		"message": "Personality Sphere"
+	},
+	"option_cowType_pinballmachinecow": {
+		"message": "Pinball machine"
+	},
+	"option_cowType_pterodactylcow": {
+		"message": "Pterodactyl"
+	},
+	"option_cowType_queencow": {
+		"message": "Queen"
+	},
+	"option_cowType_R2D2cow": {
+		"message": "R2 D2"
+	},
+	"option_cowType_radiocow": {
+		"message": "Radio"
+	},
+	"option_cowType_rencow": {
+		"message": "Ren"
+	},
+	"option_cowType_robotcow": {
+		"message": "Robot"
+	},
+	"option_cowType_robotfindskittencow": {
+		"message": "Robot finds kitten"
+	},
+	"option_cowType_roflcoptercow": {
+		"message": "ROFL-copter"
+	},
+	"option_cowType_rookcow": {
+		"message": "Rook"
+	},
+	"option_cowType_seahorsebigcow": {
+		"message": "Seahorse (big)"
+	},
+	"option_cowType_seahorsecow": {
+		"message": "Seahorse"
+	},
+	"option_cowType_sheepcow": {
+		"message": "Sheep"
+	},
+	"option_cowType_skeletoncow": {
+		"message": "Skeleton"
+	},
+	"option_cowType_smilingoctopuscow": {
+		"message": "Smiling octopus"
+	},
+	"option_cowType_stegosauruscow": {
+		"message": "Stegosaurus"
+	},
+	"option_cowType_stimpycow": {
+		"message": "Stimpy"
+	},
+	"option_cowType_sudowoodocow": {
+		"message": "Sudowoodo"
+	},
+	"option_cowType_taxicow": {
+		"message": "Taxi"
+	},
+	"option_cowType_templatecow": {
+		"message": "Template"
+	},
+	"option_cowType_threecubescow": {
+		"message": "Three cubes"
+	},
+	"option_cowType_threeeyescow": {
+		"message": "Three eyes"
+	},
+	"option_cowType_toastercow": {
+		"message": "Toaster"
+	},
+	"option_cowType_tortoisecow": {
+		"message": "Tortoise"
+	},
+	"option_cowType_turkeycow": {
+		"message": "Turkey"
+	},
+	"option_cowType_turtlecow": {
+		"message": "Turtle"
+	},
+	"option_cowType_tuxbigcow": {
+		"message": "Tux (big)"
+	},
+	"option_cowType_tuxcow": {
+		"message": "Tux"
+	},
+	"option_cowType_tweetybirdcow": {
+		"message": "Tweety bird"
+	},
+	"option_cowType_USAcow": {
+		"message": "USA"
+	},
+	"option_cowType_vadercow": {
+		"message": "Vader"
+	},
+	"option_cowType_vaderkoalacow": {
+		"message": "Vader koala"
+	},
+	"option_cowType_weepingangelcow": {
+		"message": "Weeping angel"
+	},
+	"option_cowType_whalecow": {
+		"message": "Whale"
+	},
+	"option_cowType_worldcow": {
+		"message": "World"
+	},
+	"option_cowType_wwwcow": {
+		"message": "WWW"
+	}
+}
