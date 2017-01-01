@@ -2,15 +2,9 @@ const tabSize = 8;
 const getRandomInArray = array => {
 	return array[Math.floor(Math.random() * array.length)];
 }
-const $ = (selector, from = document) => {
-	return from.querySelector(selector);
-};
-const $$ = (selector, from = document) => {
-	return Array.from(from.querySelectorAll(selector));
-};
 
 const getRandomInFolder = async folder => {
-	let files = (await (await fetch(folder + "/index.txt")).text()).split("\n");
+	let files = (await fetchText(folder + "/index.txt")).split("\n");
 	/* Remove empty string at end of array because of UNIX line ending */
 	files = files.slice(0, -1);
 	return (await fetch(folder + "/" + getRandomInArray(files))).text();

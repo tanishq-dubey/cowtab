@@ -15,7 +15,7 @@
 		"newtab": "newtab/newtab.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["libraries/private.js", "background.js"],
 		"persistent": false
 	}
 }
