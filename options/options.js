@@ -96,7 +96,7 @@ buttonReset.addEventListener("click", async () => {
 			});
 			const label = document.createElement("label");
 			label.textContent = getMessage("option_" + key);
-			label.forHtml = input.id;
+			label.htmlFor = input.id;
 			optionDiv.appendChild(label);
 			optionDiv.appendChild(input);
 		}
