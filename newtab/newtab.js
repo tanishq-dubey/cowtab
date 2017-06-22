@@ -66,7 +66,7 @@ const cowModifiers = {
 	const options = await getOptions();
 	const styleElement = document.createElement("style");
 	styleElement.textContent = `
-		body {
+		html {
 			background-color: ${options.bgColor};
 			color: ${options.fgColor};
 		}
