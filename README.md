@@ -1,6 +1,6 @@
-#Cow Tab
+# Cow Tab
 
-###A simple new tab page that replicates the classic `fortune | cowsay` command.
+### A simple new tab page that replicates the classic `fortune | cowsay` command.
 
 It supports all kinds of quote lengths and types! Please make a PR if you see bugs, I'm not good at JS or web dev.
 
