@@ -32,7 +32,7 @@ const getOptions = async () => {
 	let cow = await fetchText("../cows/" + options.cowType);
 
 	// Remove non-cow lines
-	cow = cow.match(/\n\$the_cow =.+\n([\S\s]*?)EOC/)[1];
+	cow = cow.match(/\$the_cow =.+\n([\S\s]*?)EOC/)[1];
 
 	// "Unescape" backslashes
 	cow = cow.replace(/\\\\/g, "\\");

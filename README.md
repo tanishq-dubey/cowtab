@@ -1,4 +1,5 @@
 #Cow Tab
+
 ###A simple new tab page that replicates the classic `fortune | cowsay` command.
 
 It supports all kinds of quote lengths and types! Please make a PR if you see bugs, I'm not good at JS or web dev.
@@ -31,6 +32,8 @@ alex-chew/landing (https://github.com/alex-chew/landing) for helping me with the
 paulkaefer/cowsay-files (https://github.com/paulkaefer/cowsay-files) for providing additional cow files
 
 https://packages.debian.org/sid/cowsay for providing me with the original cows
+
+Huge thanks to metarmask (https://github.com/metarmask) for a giant refactor and cleanup.
 
 ![Very Short Fortunes](http://i.imgur.com/G1ceOgX.png)
 
