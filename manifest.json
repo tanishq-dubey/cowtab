@@ -3,6 +3,7 @@
 	"manifest_version": 2,
 	"description": "A simple, fast, new tab page, with a retro feel and good advice.",
 	"version": "1.1",
+	"default_locale": "en",
 	"permissions": ["management", "storage"],
 	"icons": { "16": "icon.png",
 	           "48": "icon.png",
@@ -15,7 +16,7 @@
 		"newtab": "newtab/newtab.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["libraries/private.js", "background.js"],
 		"persistent": false
 	}
 }

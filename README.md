@@ -7,10 +7,23 @@ Get it here: https://chrome.google.com/webstore/detail/cow-tab/iecanhcmkngjdhpgn
 
 ### To add a cow:
  1. Place your `.cow` file in the "cows" directory
- 2. Add your cow to the `options.html` (line 21)
- 3. Select your cow in the options page
- 
-So if i wanted to add `test.cow` I would copy the file to the "cows" directory, add `<option value="test">test</option>` to the `options.html` at line 21, and then select the cow in the options.
+ 2. Add the filename to "cows/index.txt"
+ 3. (Optional) Add a translation to "\_locales/en/messages.json":
+
+        ,
+        "option_cowType_filenamecow": {
+            "message": "Cow name"
+        }
+
+So if I wanted to add `abc-123.cow` I would copy the file to the "cows" directory, add its filename to "cows/index.txt" and add
+
+	,
+	"option_cowType_abc123cow": {
+		"message": "ABC 123"
+	}
+at the end of the last translation in "\_locales/en/messages.json".
+
+The cow will then be selectable in the options page.
 
 ### Thanks to:
 alex-chew/landing (https://github.com/alex-chew/landing) for helping me with the options page

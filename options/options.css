@@ -1,7 +1,11 @@
-.container {
-	padding: 8px;
+body {
+	margin: 10px;
 }
 
-.option {
-	margin-bottom: 8px;
+.option, #options-io {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5px 0;
 }
