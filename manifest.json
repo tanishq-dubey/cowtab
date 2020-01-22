@@ -2,7 +2,7 @@
 	"name": "cow tab",
 	"manifest_version": 2,
 	"description": "A simple, fast, new tab page, with a retro feel and good advice.",
-	"version": "1.1",
+	"version": "1.2",
 	"default_locale": "en",
 	"permissions": ["management", "storage"],
 	"icons": { "16": "icon.png",
