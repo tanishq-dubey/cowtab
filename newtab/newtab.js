@@ -10,16 +10,10 @@ const getRandomInFolder = async folder => {
 	return fetchText(folder + "/" + getRandomInArray(files));
 };
 
-const getOptions = async () => {
-	return chromep.storage.sync.get(
-		Object.keys(await fetchJSON("../options/options.json"))
-	);
-};
 
 // Display cow
-(async () => {
+async function renderCow(options) {
 	const cowModifiers = await fetchJSON("../cow-modifiers.json");
-	const options = await getOptions();
 	const styleElement = document.createElement("style");
 	styleElement.textContent = `
 		html {
@@ -49,10 +43,10 @@ const getOptions = async () => {
 	});
 
 	$("#cow").textContent = cow;
-})();
+};
 
 // Display fortune
-(async () => {
+const renderFortune = async () => {
 	const fortunes = (await getRandomInFolder("../fortunes")).split("\n%\n")
 	.filter(fortune => fortune.length !== 0);
 
@@ -91,4 +85,15 @@ const getOptions = async () => {
 	fortuneLines.push(   " " + "-".repeat(maxWidth + 2));
 
 	$("#speech").textContent = fortuneLines.join("\n");
+};
+
+async function renderPage(options) {
+    await renderCow(options)
+    await renderFortune()
+}
+
+(async () => {
+	await chrome.storage.sync.get(
+		Object.keys(await fetchJSON("../options/options.json")), renderPage
+	);
 })();

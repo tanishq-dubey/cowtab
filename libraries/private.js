@@ -28,24 +28,3 @@ const getMessage = (...args) => {
 	}
 	return message;
 };
-
-// Makes chrome.* APIs return promises
-const chromePromiseTraps = {
-	get: (target, property) => {
-		const targetValue = target[property];
-		if(typeof targetValue === "function") {
-			return (...args) => new Promise((resolve, reject) => {
-				targetValue(...args, argument => {
-					if(chrome.runtime.lastError) {
-						reject(chrome.runtime.lastError);
-					} else {
-						resolve(argument);
-					}
-				});
-			});
-		} else {
-			return new Proxy(targetValue, chromePromiseTraps);
-		}
-	}
-};
-const chromep = new Proxy(chrome, chromePromiseTraps);
