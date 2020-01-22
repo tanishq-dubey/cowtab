@@ -23,7 +23,7 @@ chrome.runtime.onInstalled.addListener(async ({reason, previousVersion}) => {
 			}
 			chrome.storage.sync.remove(legacyKeys, ()=>{});
 			chrome.storage.sync.set(options, ()=>{});
-		}
+		})
 	}
 
 	// Save defaults options
@@ -35,6 +35,6 @@ chrome.runtime.onInstalled.addListener(async ({reason, previousVersion}) => {
 		}
 		await chrome.storage.sync.get(defaultOptions, async function(options) {
 			chrome.storage.sync.set(options, ()=>{});
-		};
+		});
 	}
 });
