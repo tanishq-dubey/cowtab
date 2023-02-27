@@ -15,9 +15,7 @@
    "default_locale": "en",
    "description": "A simple, fast, new tab page, with a retro feel and good advice.",
    "icons": {
-      "128": "icon.png",
-      "16": "icon.png",
-      "48": "icon.png"
+      "128": "icon.png"
    },
    "manifest_version": 2,
    "name": "cow tab",
