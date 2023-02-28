@@ -5,7 +5,7 @@
 
 It supports all kinds of quote lengths and types! Please make a PR if you see bugs, I'm not good at JS or web dev.
 
-Get it here: https://addons.mozilla.org/en-US/firefox/addon/cowtab/ (once approved)
+Get it here: https://addons.mozilla.org/en-US/firefox/addon/cowtab/
 
 ### To add a cow:
  1. Place your `.cow` file in the "cows" directory
