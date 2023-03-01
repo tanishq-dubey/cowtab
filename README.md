@@ -1,10 +1,11 @@
 # Cow Tab
+#### This is a quick and dirty port of this extension to Firefox ####
 
 ### A simple new tab page that replicates the classic `fortune | cowsay` command.
 
 It supports all kinds of quote lengths and types! Please make a PR if you see bugs, I'm not good at JS or web dev.
 
-Get it here: https://chrome.google.com/webstore/detail/cow-tab/iecanhcmkngjdhpgnaijdcfnhpjdjffc?hl=en-US&gl=US
+Get it here: https://addons.mozilla.org/en-US/firefox/addon/cowtab/
 
 ### To add a cow:
  1. Place your `.cow` file in the "cows" directory
@@ -40,3 +41,4 @@ Huge thanks to metarmask (https://github.com/metarmask) for a giant refactor and
 ![Very Long Fortunes](http://i.imgur.com/3yEe3Eg.png)
 
 ![And Short Fortunes](http://i.imgur.com/5cT3DBp.png)
+

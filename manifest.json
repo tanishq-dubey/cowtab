@@ -1,22 +1,29 @@
 {
-	"name": "cow tab",
-	"manifest_version": 3,
-	"description": "A simple, fast, new tab page, with a retro feel and good advice. Replicates the 'fortune | cowsay' command found on *Nix systems.",
-	"version": "2.0",
-	"default_locale": "en",
-	"permissions": ["management", "storage"],
-	"icons": { 
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png" 
-  },
-	"options_ui": {
-		"page": "options/options.html"
-  },
-	"chrome_url_overrides" : {
-		"newtab": "newtab/newtab.html"
-	},
-	"background": {
-		"service_worker": "background.js"
-	}
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "{e62ee94f-e13c-4957-8c00-b786842b9954}",
+         "strict_min_version": "60.0"
+      }
+   },
+   "background": {
+      "persistent": false,
+      "scripts": [ "libraries/private.js", "background.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab/newtab.html"
+   },
+   "default_locale": "en",
+   "description": "A simple, fast, new tab page, with a retro feel and good advice.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "cow tab",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "management", "storage" ],
+   "version": "1.3"
+   
 }
